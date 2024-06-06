@@ -31,8 +31,6 @@ const typeDefs = gql`
         name: String!
         "Photo of the author via URL"
         photo: String
-
     }
-
 `;
 module.exports = typeDefs;
