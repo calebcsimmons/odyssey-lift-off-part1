@@ -1,6 +1,7 @@
 const gql = require("graphql-tag"); // Used to wrap GraphQL strings that Apollo libraries expect
 
 const typeDefs = gql`
+
 "A track is a group of Modules that teaches about a specific topic"
 type Track {
 
@@ -16,6 +17,16 @@ type Track {
     length: Int
     "the number of modules this track contains"
     modulesCount: Int 
+}
+
+"Author of a complete track"
+type Author {
+    id: ID!
+    "Name of the author"
+    name: String!
+    "Photo of the author via URL"
+    photo: String
+
 }
 
 `;
