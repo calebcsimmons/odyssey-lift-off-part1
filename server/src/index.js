@@ -4,6 +4,10 @@ const { ApolloServer } = require("@apollo/server");
 // Import the startStandaloneServer function from the @apollo/server/standalone package
 const { startStandaloneServer } = require("@apollo/server/standalone");
 
+// Import addMocksToSchema and makeExecutableSchema for mock data trials
+const { addMocksToSchema } = require("@graphql-tools/mock");
+const { makeExecutableSchema } = require("@graphql-tools/schema");
+
 // Import the GraphQL schema definitions from the local schema file
 const typeDefs = require("./schema");
 
