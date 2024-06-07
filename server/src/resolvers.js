@@ -13,7 +13,7 @@ const resolvers = {
             return dataSources.trackAPI.getAuthor(authorId);
         },
     },
-}
+};
 
 
 module.exports = resolvers;
