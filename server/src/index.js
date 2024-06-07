@@ -20,7 +20,6 @@ async function startApolloServer() {
   const server = new ApolloServer({
     typeDefs,
     resolvers,
-    introspection: true // Enable introspection
   });
     
     // Creat new instance of ApolloServer with provided schema definitions
