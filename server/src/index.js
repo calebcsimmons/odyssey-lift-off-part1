@@ -19,7 +19,7 @@ const TrackAPI = require("./datasources/track-api");
 async function startApolloServer() {
   const server = new ApolloServer({
     typeDefs,
-    resolvers,
+    resolvers
   });
     
     // Creat new instance of ApolloServer with provided schema definitions
