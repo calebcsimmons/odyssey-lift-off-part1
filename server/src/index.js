@@ -28,7 +28,7 @@ async function startApolloServer() {
         const {cache} = server;
         return {
           dataSources: {
-            TrackAPI: new TrackAPI({cache}),
+            trackAPI: new TrackAPI({cache}),
           },
         };
       },
