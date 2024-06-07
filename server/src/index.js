@@ -13,7 +13,7 @@ const typeDefs = require("./schema");
 
 // Import resolvers and datasources
 const resolvers = require("./resolvers");
-const TrackAPI = require("./datasources");
+const TrackAPI = require("./datasources/track-api");
 
 
 
@@ -21,7 +21,7 @@ const TrackAPI = require("./datasources");
 async function startApolloServer() {
     const server = new ApolloServer({
       typeDefs,
-      resolvers,
+      resolvers
     }); 
     
     // Creat new instance of ApolloServer with provided schema definitions
@@ -34,7 +34,7 @@ async function startApolloServer() {
           },
         };
       },
-    }); // Define the url for sever and start server
+    }); 
 
     // Verify server is running
     console.log(`
