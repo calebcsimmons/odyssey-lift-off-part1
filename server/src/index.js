@@ -15,8 +15,6 @@ const typeDefs = require("./schema");
 const resolvers = require("./resolvers");
 const TrackAPI = require("./datasources/track-api");
 
-
-
 // Define an asynchronous function to start the Apollo Server
 async function startApolloServer() {
     const server = new ApolloServer({
