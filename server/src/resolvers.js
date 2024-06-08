@@ -21,6 +21,11 @@ const resolvers = {
       author: ({ authorId }, _, { dataSources }) => {
         return dataSources.trackAPI.getAuthor(authorId);
       },
+
+      // Get the module details for a specific track using the trackId
+      modules: ({ id }, _, { dataSources }) => {
+        return dataSources.trackAPI.getTrackModules(id)
+      }
     },
   };
   
