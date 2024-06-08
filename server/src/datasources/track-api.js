@@ -1,3 +1,5 @@
+// the data source in charge of calling the REST API and retrieving the data
+
 const { RESTDataSource } = require('@apollo/datasource-rest');
 
 class TrackAPI extends RESTDataSource {
@@ -12,6 +14,12 @@ class TrackAPI extends RESTDataSource {
 
   async getAuthor(authorId) {
     return this.get(`author/${authorId}`);
+  }
+
+  // Method to get a single track
+  async getTrack(trackId) {
+    return this.get(`track/${trackId}`)
+
   }
 }
 
