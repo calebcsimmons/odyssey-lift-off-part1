@@ -13,6 +13,25 @@ const resolvers = {
         return dataSources.trackAPI.getTrack(id);
       },
     },
+
+    //? Entry point for all mutation operations
+
+    Mutation: {
+
+      // Increments a track's numberOfViews property
+      incrementTrackViews: async (_, { id }, { dataSources }) => {
+        const track = await dataSources.trackAPI.incrementTrackViews(id);
+
+        return {
+          code: 200,
+          success: true,
+          message: `Successfully incremented number of views for track ${id}`,
+          track
+        }
+      },
+    },
+
+
   
     //? Defines resolvers for fields of the Track object type.
     Track: {
