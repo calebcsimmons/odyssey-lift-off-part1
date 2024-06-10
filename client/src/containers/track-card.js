@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { colors, mq } from '../styles';
 import { humanReadableTimeFromSeconds } from '../utils/helpers';
 import { Link } from 'react-router-dom';
-import { gql, useMutation } from '@apollo/client';
+import { gql, useMutation } from "@apollo/client";
 
 
 /**
@@ -30,12 +30,13 @@ mutation IncrementTrackViews($incrementTrackViewsId: ID!) {
 const TrackCard = ({ track }) => {
   const { title, thumbnail, author, length, modulesCount, id } = track;
 
-  const [ incrementTrackViews ] = useMutation(INCREMENT_TRACK_VIEWS, {
-    variables: { incrementTrackViewsID: id },
+  const [incrementTrackViews] = useMutation(INCREMENT_TRACK_VIEWS, {
+    variables: { incrementTrackViewsId: id },
+    // to observe what the mutation response returns
     onCompleted: (data) => {
       console.log(data);
-    }
-  })
+    },
+  });
 
 
   return (
